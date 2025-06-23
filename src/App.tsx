@@ -11,10 +11,12 @@ import WishCard from './components/WishCard';
 import CakeInteraction from './components/CakeInteraction';
 import WishSubmission from './components/WishSubmission';
 import FloatingBubbles from './components/FloatingBubbles';
+import CakeExplosion from './components/CakeExplosion';
 
 function App() {
   const [showWishCard, setShowWishCard] = useState(false);
   const [hasClickedMain, setHasClickedMain] = useState(false);
+  const [showCakeExplosion, setShowCakeExplosion] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
   const audioContextRef = useRef<AudioContext | null>(null);
   const loopTimeoutRef = useRef<NodeJS.Timeout | null>(null);
@@ -130,7 +132,7 @@ function App() {
     if (hasClickedMain) return;
     
     setHasClickedMain(true);
-    setShowWishCard(true);
+    setShowCakeExplosion(true);
     
     // Start infinite birthday tune
     try {
@@ -175,6 +177,10 @@ function App() {
     }, 250);
   };
 
+  const handleCakeExplosionComplete = () => {
+    setShowWishCard(true);
+  };
+
   // Cleanup on component unmount
   React.useEffect(() => {
     return () => {
@@ -188,6 +194,12 @@ function App() {
       <ParticleBackground />
       <FloatingIcons />
       <FloatingBubbles />
+      
+      {/* Cake Explosion Animation */}
+      <CakeExplosion 
+        isActive={showCakeExplosion} 
+        onComplete={handleCakeExplosionComplete}
+      />
       
       {/* UI Components */}
       <FloatingTimeWidget />
@@ -266,7 +278,7 @@ function App() {
               animate={{ opacity: 1 }}
               transition={{ delay: 1, duration: 1 }}
             >
-              ✨ The magic has begun! Check out all the interactive elements around you ✨
+              ✨ The magic has begun! Watch the spectacular cake explosion! ✨
               <br />
               <span className="text-sm text-gray-400 mt-2 block">
                 🎵 Birthday tune is playing! Use the music button to control playback

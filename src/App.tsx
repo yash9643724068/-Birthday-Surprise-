@@ -262,7 +262,7 @@ function App() {
             <div className="relative z-10 flex items-center space-x-3">
               <Sparkles className="text-cyan-400 animate-sparkle" size={28} />
               <span className="text-2xl font-semibold text-white">
-                {hasClickedMain ? "🎂 Surprise Activated! 🎂" : "Tap to Wish Aditya Thakur 🎉"}
+                {hasClickedMain ? "🎂 Surprise Activated! 🎂" : "Tap to Wish Deepak 🎉"}
               </span>
               <Sparkles className="text-purple-400 animate-sparkle" size={28} />
             </div>

@@ -51,7 +51,7 @@ const WishCard: React.FC<WishCardProps> = ({ isVisible, onClose }) => {
           </p>
           <div className="flex items-center justify-center space-x-2 text-pink-400">
             <Heart className="animate-pulse" size={20} />
-            <span className="font-medium">From your friend Adarsh</span>
+            <span className="font-medium">From your friend Yashh</span>
             <Heart className="animate-pulse" size={20} />
           </div>
         </motion.div>

@@ -42,7 +42,7 @@ const WishCard: React.FC<WishCardProps> = ({ isVisible, onClose }) => {
             Happy Birthday
           </h2>
           <h3 className="text-2xl font-semibold text-cyan-400 mb-6">
-            Deepak!
+            Aditya!
           </h3>
           <p className="text-gray-300 text-lg leading-relaxed mb-6">
             May your year be as amazing as you are! 🎈
@@ -51,7 +51,7 @@ const WishCard: React.FC<WishCardProps> = ({ isVisible, onClose }) => {
           </p>
           <div className="flex items-center justify-center space-x-2 text-pink-400">
             <Heart className="animate-pulse" size={20} />
-            <span className="font-medium">From your friend Yashh</span>
+            <span className="font-medium">From your friend Yash</span>
             <Heart className="animate-pulse" size={20} />
           </div>
         </motion.div>
